@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/pure-min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
+
+
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+        
+        #header {
+            background-color: orange;
+            text-align: center;
+            border-bottom: solid 1px black;
+        }
+        
+        #mainBody {
+            height: 90%;
+        }
+        
+        #col1 {
+            background-color: royalblue;
+            max-height: 100%;
+        }
+        
+        #col2 {
+            background-color: darkred;
+            max-height: 100%;
+            position: relative;
+            display: flex;
+            flex-flow: column;
+        }
+        
+        #current-chat-container {
+            flex-grow: 1;
+        }
+        
+        .left-message {
+            margin-left: 10px;
+        }
+        
+        .right-message {
+            text-align: right;
+            margin-left: auto;
+            margin-right: 10px;
+        }
+        
+        #col3 {
+            background-color: forestgreen;
+            max-height: 100%;
+        }
+        
+        #col1Header,
+        #col1Header,
+        #col3Header {
+            top: 10px;
+            left: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <div class='pure-g' id='header'>
+            <div class='pure-u-1 pure-u-sm-1-4'>dropDownMenu</div>
+            <div class='pure-u-1 pure-u-sm-1-2'>
+                <h1>Messenger App</h1>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class='pure-g' id='mainBody'>
+
+        <div class='pure-u-1 pure-u-sm-1-3 pure-u-xl-1-4' id='col1'>
+            <div>
+                <div class='pure-menu'>
+
+                    <ul class='pure-u-1 pure-menu-list'>
+                        <li class='pure-menu-heading'></li>
+                        <li class='pure-menu-item' id=item1>
+                            Item one
+                        </li>
+                        <li class='pure-menu-item' id=item2>
+                            Item two
+                        </li>
+                        <li class='pure-menu-item' id=item3>
+                            Item three
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <div class='pure-u-1 pure-u-sm-2-3 pure-u-xl-1-2' id='col2'>
+
+            <div class='pure-menu pure-menu-scrollable' id='current-chat-container'>
+
+                <ul class='pure-u-1 pure-menu-list'>
+                    <li class='pure-menu-heading'></li>
+
+                    <li class='pure-menu-item left-message' id=p1>
+                        <h3>person one:</h3>
+                        <p>hi there!</p>
+                    </li>
+
+                    <li class='pure-menu-item left-message' id=p2>
+                        <h3>person two:</h3>
+                        <p>hi there!</p>
+                    </li>
+
+                    <li class='pure-menu-item left-message' id=p3>
+                        <h3> Person three:</h3>
+                        <p>hi there!</p>
+                    </li>
+
+                    <li class='pure-menu-item right-message' id=me>
+                        <h3> Me:</h3>
+                        <p>hi there!</p>
+                    </li>
+                    <li class='pure-menu-item left-message' id=p1>
+                        <h3>person one:</h3>
+                        <p>hi there!</p>
+                    </li>
+
+                    <li class='pure-menu-item left-message' id=p2>
+                        <h3>person two:</h3>
+                        <p>hi there!</p>
+                    </li>
+
+                    <li class='pure-menu-item left-message' id=p3>
+                        <h3> Person three:</h3>
+                        <p>hi there!</p>
+                    </li>
+
+                    <li class='pure-menu-item right-message' id=me>
+                        <h3> Me:</h3>
+                        <p>hi there!</p>
+                    </li>
+                    <li class='pure-menu-item left-message' id=p1>
+                        <h3>person one:</h3>
+                        <p>hi there!</p>
+                    </li>
+
+                    <li class='pure-menu-item left-message' id=p2>
+                        <h3>person two:</h3>
+                        <p>hi there!</p>
+                    </li>
+
+                    <li class='pure-menu-item left-message' id=p3>
+                        <h3> Person three:</h3>
+                        <p>hi there!</p>
+                    </li>
+
+                    <li class='pure-menu-item right-message' id=me>
+                        <h3> Me:</h3>
+                        <p>hi there!</p>
+                    </li>
+                    <li class='pure-menu-item left-message' id=p1>
+                        <h3>person one:</h3>
+                        <p>hi there!</p>
+                    </li>
+
+                    <li class='pure-menu-item left-message' id=p2>
+                        <h3>person two:</h3>
+                        <p>hi there!</p>
+                    </li>
+
+                    <li class='pure-menu-item left-message' id=p3>
+                        <h3> Person three:</h3>
+                        <p>hi there!</p>
+                    </li>
+
+                    <li class='pure-menu-item right-message' id=me>
+                        <h3> Me:</h3>
+                        <p>hi there!</p>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class='pure-u-1 pure-u-xl-1-4 pure-menu-scrollable' id='col3'>
+
+            <div>
+                <div class='pure-menu'>
+
+                    <ul class='pure-u-1 pure-menu-list'>
+                        <li class='pure-menu-heading'></li>
+                        <li class='pure-menu-item' id=item1>
+                            Item one
+                        </li>
+                        <li class='pure-menu-item' id=item2>
+                            Item two
+                        </li>
+                        <li class='pure-menu-item' id=item3>
+                            Item three
+                        </li>
+                        <li class='pure-menu-heading'></li>
+                        <li class='pure-menu-item' id=item1>
+                            Item one
+                        </li>
+                        <li class='pure-menu-item' id=item2>
+                            Item two
+                        </li>
+                        <li class='pure-menu-item' id=item3>
+                            Item three
+                        </li>
+                        <li class='pure-menu-heading'></li>
+                        <li class='pure-menu-item' id=item1>
+                            Item one
+                        </li>
+                        <li class='pure-menu-item' id=item2>
+                            Item two
+                        </li>
+                        <li class='pure-menu-item' id=item3>
+                            Item three
+                        </li>
+                        <li class='pure-menu-heading'></li>
+                        <li class='pure-menu-item' id=item1>
+                            Item one
+                        </li>
+                        <li class='pure-menu-item' id=item2>
+                            Item two
+                        </li>
+                        <li class='pure-menu-item' id=item3>
+                            Item three
+                        </li>
+                        <li class='pure-menu-heading'></li>
+                        <li class='pure-menu-item' id=item1>
+                            Item one
+                        </li>
+                        <li class='pure-menu-item' id=item2>
+                            Item two
+                        </li>
+                        <li class='pure-menu-item' id=item3>
+                            Item three
+                        </li>
+                        <li class='pure-menu-heading'></li>
+                        <li class='pure-menu-item' id=item1>
+                            Item one
+                        </li>
+                        <li class='pure-menu-item' id=item2>
+                            Item two
+                        </li>
+                        <li class='pure-menu-item' id=item3>
+                            Item three
+                            <li class='pure-menu-item' id=item1>
+                                Item one
+                            </li>
+                            <li class='pure-menu-item' id=item2>
+                                Item two
+                            </li>
+                            <li class='pure-menu-item' id=item3>
+                                Item three
+                            </li>
+                            <li class='pure-menu-heading'></li>
+                            <li class='pure-menu-item' id=item1>
+                                Item one
+                            </li>
+                            <li class='pure-menu-item' id=item2>
+                                Item two
+                            </li>
+                            <li class='pure-menu-item' id=item3>
+                                Item three
+                            </li>
+                            <li class='pure-menu-heading'></li>
+                            <li class='pure-menu-item' id=item1>
+                                Item one
+                            </li>
+                            <li class='pure-menu-item' id=item2>
+                                Item two
+                            </li>
+                            <li class='pure-menu-item' id=item3>
+                                Item three
+                            </li>
+                            <li class='pure-menu-heading'></li>
+                            <li class='pure-menu-item' id=item1>
+                                Item one
+                            </li>
+                            <li class='pure-menu-item' id=item2>
+                                Item two
+                            </li>
+                            <li class='pure-menu-item' id=item3>
+                                Item three
+                            </li>
+                            <li class='pure-menu-heading'></li>
+                            <li class='pure-menu-item' id=item1>
+                                Item one
+                            </li>
+                            <li class='pure-menu-item' id=item2>
+                                Item two
+                            </li>
+                            <li class='pure-menu-item' id=item3>
+                                Item three
+                            </li>
+                            <li class='pure-menu-heading'></li>
+                            <li class='pure-menu-item' id=item1>
+                                Item one
+                            </li>
+                            <li class='pure-menu-item' id=item2>
+                                Item two
+                            </li>
+                            <li class='pure-menu-item' id=item3>
+                                Item three
+                                <li class='pure-menu-item' id=item1>
+                                    Item one
+                                </li>
+                                <li class='pure-menu-item' id=item2>
+                                    Item two
+                                </li>
+                                <li class='pure-menu-item' id=item3>
+                                    Item three
+                                </li>
+                                <li class='pure-menu-heading'></li>
+                                <li class='pure-menu-item' id=item1>
+                                    Item one
+                                </li>
+                                <li class='pure-menu-item' id=item2>
+                                    Item two
+                                </li>
+                                <li class='pure-menu-item' id=item3>
+                                    Item three
+                                </li>
+                                <li class='pure-menu-heading'></li>
+                                <li class='pure-menu-item' id=item1>
+                                    Item one
+                                </li>
+                                <li class='pure-menu-item' id=item2>
+                                    Item two
+                                </li>
+                                <li class='pure-menu-item' id=item3>
+                                    Item three
+                                </li>
+                                <li class='pure-menu-heading'></li>
+                                <li class='pure-menu-item' id=item1>
+                                    Item one
+                                </li>
+                                <li class='pure-menu-item' id=item2>
+                                    Item two
+                                </li>
+                                <li class='pure-menu-item' id=item3>
+                                    Item three
+                                </li>
+                                <li class='pure-menu-heading'></li>
+                                <li class='pure-menu-item' id=item1>
+                                    Item one
+                                </li>
+                                <li class='pure-menu-item' id=item2>
+                                    Item two
+                                </li>
+                                <li class='pure-menu-item' id=item3>
+                                    Item three
+                                </li>
+                                <li class='pure-menu-heading'></li>
+                                <li class='pure-menu-item' id=item1>
+                                    Item one
+                                </li>
+                                <li class='pure-menu-item' id=item2>
+                                    Item two
+                                </li>
+                                <li class='pure-menu-item' id=item3>
+                                    Item three
+                                    <li class='pure-menu-item' id=item1>
+                                        Item one
+                                    </li>
+                                    <li class='pure-menu-item' id=item2>
+                                        Item two
+                                    </li>
+                                    <li class='pure-menu-item' id=item3>
+                                        Item three
+                                    </li>
+                                    <li class='pure-menu-heading'></li>
+                                    <li class='pure-menu-item' id=item1>
+                                        Item one
+                                    </li>
+                                    <li class='pure-menu-item' id=item2>
+                                        Item two
+                                    </li>
+                                    <li class='pure-menu-item' id=item3>
+                                        Item three
+                                    </li>
+                                    <li class='pure-menu-heading'></li>
+                                    <li class='pure-menu-item' id=item1>
+                                        Item one
+                                    </li>
+                                    <li class='pure-menu-item' id=item2>
+                                        Item two
+                                    </li>
+                                    <li class='pure-menu-item' id=item3>
+                                        Item three
+                                    </li>
+                                    <li class='pure-menu-heading'></li>
+                                    <li class='pure-menu-item' id=item1>
+                                        Item one
+                                    </li>
+                                    <li class='pure-menu-item' id=item2>
+                                        Item two
+                                    </li>
+                                    <li class='pure-menu-item' id=item3>
+                                        Item three
+                                    </li>
+                                    <li class='pure-menu-heading'></li>
+                                    <li class='pure-menu-item' id=item1>
+                                        Item one
+                                    </li>
+                                    <li class='pure-menu-item' id=item2>
+                                        Item two
+                                    </li>
+                                    <li class='pure-menu-item' id=item3>
+                                        Item three
+                                    </li>
+                                    <li class='pure-menu-heading'></li>
+                                    <li class='pure-menu-item' id=item1>
+                                        Item one
+                                    </li>
+                                    <li class='pure-menu-item' id=item2>
+                                        Item two
+                                    </li>
+                                    <li class='pure-menu-item' id=item3>
+                                        Item three
+                                    </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+
+</html>
