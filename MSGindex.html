@@ -8,11 +8,19 @@
 
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.6/build/grids-responsive-min.css">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
 
     <style>
         html,
         body {
             height: 100%;
+        }
+        
+        #title {
+            text-align: center;
+            background-color: slategray;
         }
         
         #header {
@@ -26,12 +34,20 @@
         }
         
         #col1 {
-            background-color: royalblue;
+            background-color: palegreen;
             max-height: 100%;
         }
         
+        #leftColCont {
+            max-height: 100%;
+        }
+        
+        .custom-menu {
+            height: 500px;
+        }
+        
         #col2 {
-            background-color: darkred;
+            background-color: lightgrey;
             max-height: 100%;
             position: relative;
             display: flex;
@@ -53,7 +69,7 @@
         }
         
         #col3 {
-            background-color: forestgreen;
+            background-color: paleturquoise;
             max-height: 100%;
         }
         
@@ -63,382 +79,309 @@
             top: 10px;
             left: 10px;
         }
+        
+        #msgBox {
+            padding: 10px;
+        }
+        
+        #toolsButtons {
+            margin: 20px auto;
+            text-align: center;
+            width: 90%;
+        }
+        
+        #Calendar {
+            margin: 20px auto;
+            text-align: center;
+            width: 90%;
+        }
+        
+        #Calendar>* {
+            width: 100%;
+        }
     </style>
 </head>
 
 <body>
+    <div id='title' class='pure-u-1 '>
+        <h1>Messenger App</h1>
+    </div>
 
     <div>
         <div class='pure-g' id='header'>
-            <div class='pure-u-1 pure-u-sm-1-4'>dropDownMenu</div>
-            <div class='pure-u-1 pure-u-sm-1-2'>
-                <h1>Messenger App</h1>
-            </div>
 
+            <div class='pure-g'>
+                <div class='pure-u-1 pure-u-sm-1-4'>
+                    <nav id='mainMenu'>
+
+                        <div class='pure-menu-horizontal'>
+
+                            <ul class='pure-menu-item  pure-menu-selected pure-menu-has-children pure-menu-allow-hover'>
+                                <a href='#' id='menuBar1' class='pure-menu-link'>Menu</a>
+                                <ul class='pure-menu-children'>
+                                    <li class='pure-menu-item pure-menu-selected' id='homeBtn'>
+                                        <a href="#" class='pure-menu-link'>Home</a>
+                                    </li>
+                                    <li class='pure-menu-item' id=projReqsBtn>
+                                        <a href="#" class='pure-menu-link'>History</a>
+                                    </li>
+                                    <li class='pure-menu-item' id='searchBarBtn'>
+                                        <a href="#" class='pure-menu-link'>Friends</a>
+                                    </li>
+                                    <a class='pure-menu-allow-hover' id='gitLinkDiv' style="display:block" href='https://github.com/Harry-Whitehouse'>
+                                        <img src='https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png' height="20" width='20' alt='GitHub'>
+                                        <!-- more images and hyperlinks -->
+                                    </a>
+                                </ul>
+                            </ul>
+                    </nav>
+                    </div>
+                </div>
+
+
+
+            </div>
 
         </div>
 
-    </div>
+        <div class='pure-g' id='mainBody'>
 
-    <div class='pure-g' id='mainBody'>
+            <div class='pure-u-1 pure-u-sm-1-3 pure-u-xl-1-4' id='col1'>
+                <div>
+                    <div class='pure-menu'>
 
-        <div class='pure-u-1 pure-u-sm-1-3 pure-u-xl-1-4' id='col1'>
-            <div>
-                <div class='pure-menu'>
+                        <div class="pure-menu pure-menu-scrollable custom-menu" id="leftColCont">
+                            <ul class="pure-menu-list">
+                                <li class="pure-menu-heading">
+                                    <a href="#" class="pure-menu-link">All Groups</a>
+                                </li>
+                                <li class="pure-menu-item pure-menu-selected">
+                                    <a href="#" class="pure-menu-link">All Messages</a>
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a href="#" class="pure-menu-link">Unreads</a>
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a href="#" class="pure-menu-link">Mentions</a>
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a href="#" class="pure-menu-link">Announcements</a>
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a href="#" class="pure-menu-link">All Channels</a>
+                                </li>
+                                <br><br>
+                            </ul>
+                            <ul class='pure-u-1 pure-menu-list'>
+                                <li class='pure-menu-heading'></li>
+                                <br><br>
+                                <li class="pure-menu-heading">
+                                    <a href="#" class="pure-menu-link">All Messages</a>
+                                </li>
+                                <li class="pure-menu-item pure-menu-selected">
+                                    <a href="#" class="pure-menu-link">Design</a>
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a href="#" class="pure-menu-link">Engineering</a>
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a href="#" class="pure-menu-link">Finance</a>
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a href="#" class="pure-menu-link">Team</a>
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a href="#" class="pure-menu-link">Clothing</a>
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a href="#" class="pure-menu-link">News</a>
+                                </li>
+                                <li class="pure-menu-item">
+                                    <a href="#" class="pure-menu-link">Team Announcements</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class='pure-u-1 pure-u-sm-2-3 pure-u-xl-1-2' id='col2'>
+
+                <div class='pure-menu pure-menu-scrollable' id='current-chat-container'>
 
                     <ul class='pure-u-1 pure-menu-list'>
                         <li class='pure-menu-heading'></li>
-                        <li class='pure-menu-item' id=item1>
-                            Item one
+
+                        <li class='pure-menu-item left-message' id=p1>
+                            <h3>person one:</h3>
+                            <p>hi there!</p>
                         </li>
-                        <li class='pure-menu-item' id=item2>
-                            Item two
+
+                        <li class='pure-menu-item left-message' id=p2>
+                            <h3>person two:</h3>
+                            <p>hi there!</p>
                         </li>
-                        <li class='pure-menu-item' id=item3>
-                            Item three
+
+                        <li class='pure-menu-item left-message' id=p3>
+                            <h3> Person three:</h3>
+                            <p>hi there!</p>
                         </li>
+
+                        <li class='pure-menu-item right-message' id=me>
+                            <h3> Me:</h3>
+                            <p>hi there!</p>
+                        </li>
+                        <li class='pure-menu-item left-message' id=p1>
+                            <h3>person one:</h3>
+                            <p>hi there!</p>
+                        </li>
+
+                        <li class='pure-menu-item left-message' id=p2>
+                            <h3>person two:</h3>
+                            <p>hi there!</p>
+                        </li>
+
+                        <li class='pure-menu-item left-message' id=p3>
+                            <h3> Person three:</h3>
+                            <p>hi there!</p>
+                        </li>
+
+                        <li class='pure-menu-item right-message' id=me>
+                            <h3> Me:</h3>
+                            <p>hi there!</p>
+                        </li>
+                        <li class='pure-menu-item left-message' id=p1>
+                            <h3>person one:</h3>
+                            <p>hi there!</p>
+                        </li>
+
+                        <li class='pure-menu-item left-message' id=p2>
+                            <h3>person two:</h3>
+                            <p>hi there!</p>
+                        </li>
+
+                        <li class='pure-menu-item left-message' id=p3>
+                            <h3> Person three:</h3>
+                            <p>hi there!</p>
+                        </li>
+
+                        <li class='pure-menu-item right-message' id=me>
+                            <h3> Me:</h3>
+                            <p>hi there!</p>
+                        </li>
+                        <li class='pure-menu-item left-message' id=p1>
+                            <h3>person one:</h3>
+                            <p>hi there!</p>
+                        </li>
+
+                        <li class='pure-menu-item left-message' id=p2>
+                            <h3>person two:</h3>
+                            <p>hi there!</p>
+                        </li>
+
+                        <li class='pure-menu-item left-message' id=p3>
+                            <h3> Person three:</h3>
+                            <p>hi there!</p>
+                        </li>
+
+                        <li class='pure-menu-item right-message' id=me>
+                            <h3> Me:</h3>
+                            <p>hi there!</p>
+                        </li>
+
                     </ul>
+
+                </div>
+                <form class="pure-form pure-form-stacked" id="msgBox">
+                    <fieldset>
+                        <legend> Message Here:</legend>
+                        <input type='text' placeholder='...' class='pure-input-rounded pure-input-1'>
+                        <button type='submit' class='pure-button'>Send</button>
+                    </fieldset>
+
+                </form>
+            </div>
+
+
+            <div class='pure-u-1 pure-u-xl-1-4 pure-menu-scrollable' id='col3'>
+
+                <div class='pure-button-group' role='group' aria-label="..." id=toolsButtons>
+
+                    <button class="btn btn-outline-dark">Calendar</button>
+                    <button class="btn btn-outline-dark">Notes</button>
+                    <button class="btn btn-outline-dark">Tasks</button>
+                    <button class="btn btn-outline-dark">Contacts</button>
+
+                </div>
+
+                <div id='Calendar'>
+
+                    <table class="pure-table pure-table-bordered">
+                        <thead>
+                            <tr>
+                                <th>Mon</th>
+                                <th>Tue</th>
+                                <th>Wed</th>
+                                <th>Thu</th>
+                                <th>Fri</th>
+                                <!-- <th>Sat</th>
+                                <th>Sun</th> -->
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>2</td>
+                                <td>3</td>
+                                <td>4</td>
+                                <td>5</td>
+                                <!-- <td>6</td>
+                                <td>7</td> -->
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td>9</td>
+                                <td>10</td>
+                                <td>11</td>
+                                <td>12</td>
+                                <!-- <td>13</td>
+                                <td>14</td> -->
+                            </tr>
+                            <tr>
+                                <td>15</td>
+                                <td>16</td>
+                                <td>17</td>
+                                <td>18</td>
+                                <td>19</td>
+                                <!-- <td>20</td>
+                                <td>21</td> -->
+                            </tr>
+                            <tr>
+                                <td>22</td>
+                                <td>23</td>
+                                <td>24</td>
+                                <td>25</td>
+                                <td>26</td>
+                                <!-- <td>27</td>
+                                <td>28</td> -->
+                            </tr>
+                            <tr>
+                                <td>29</td>
+                                <td>30</td>
+                                <td>31</td>
+                                <td></td>
+                                <td></td>
+                                <!-- <td></td>
+                                <td></td> -->
+                            </tr>
+                        </tbody>
+
+                    </table>
+
                 </div>
             </div>
-        </div>
-
-
-        <div class='pure-u-1 pure-u-sm-2-3 pure-u-xl-1-2' id='col2'>
-
-            <div class='pure-menu pure-menu-scrollable' id='current-chat-container'>
-
-                <ul class='pure-u-1 pure-menu-list'>
-                    <li class='pure-menu-heading'></li>
-
-                    <li class='pure-menu-item left-message' id=p1>
-                        <h3>person one:</h3>
-                        <p>hi there!</p>
-                    </li>
-
-                    <li class='pure-menu-item left-message' id=p2>
-                        <h3>person two:</h3>
-                        <p>hi there!</p>
-                    </li>
-
-                    <li class='pure-menu-item left-message' id=p3>
-                        <h3> Person three:</h3>
-                        <p>hi there!</p>
-                    </li>
-
-                    <li class='pure-menu-item right-message' id=me>
-                        <h3> Me:</h3>
-                        <p>hi there!</p>
-                    </li>
-                    <li class='pure-menu-item left-message' id=p1>
-                        <h3>person one:</h3>
-                        <p>hi there!</p>
-                    </li>
-
-                    <li class='pure-menu-item left-message' id=p2>
-                        <h3>person two:</h3>
-                        <p>hi there!</p>
-                    </li>
-
-                    <li class='pure-menu-item left-message' id=p3>
-                        <h3> Person three:</h3>
-                        <p>hi there!</p>
-                    </li>
-
-                    <li class='pure-menu-item right-message' id=me>
-                        <h3> Me:</h3>
-                        <p>hi there!</p>
-                    </li>
-                    <li class='pure-menu-item left-message' id=p1>
-                        <h3>person one:</h3>
-                        <p>hi there!</p>
-                    </li>
-
-                    <li class='pure-menu-item left-message' id=p2>
-                        <h3>person two:</h3>
-                        <p>hi there!</p>
-                    </li>
-
-                    <li class='pure-menu-item left-message' id=p3>
-                        <h3> Person three:</h3>
-                        <p>hi there!</p>
-                    </li>
-
-                    <li class='pure-menu-item right-message' id=me>
-                        <h3> Me:</h3>
-                        <p>hi there!</p>
-                    </li>
-                    <li class='pure-menu-item left-message' id=p1>
-                        <h3>person one:</h3>
-                        <p>hi there!</p>
-                    </li>
-
-                    <li class='pure-menu-item left-message' id=p2>
-                        <h3>person two:</h3>
-                        <p>hi there!</p>
-                    </li>
-
-                    <li class='pure-menu-item left-message' id=p3>
-                        <h3> Person three:</h3>
-                        <p>hi there!</p>
-                    </li>
-
-                    <li class='pure-menu-item right-message' id=me>
-                        <h3> Me:</h3>
-                        <p>hi there!</p>
-                    </li>
-
-                </ul>
-            </div>
-
-        </div>
-
-
-        <div class='pure-u-1 pure-u-xl-1-4 pure-menu-scrollable' id='col3'>
-
-            <div>
-                <div class='pure-menu'>
-
-                    <ul class='pure-u-1 pure-menu-list'>
-                        <li class='pure-menu-heading'></li>
-                        <li class='pure-menu-item' id=item1>
-                            Item one
-                        </li>
-                        <li class='pure-menu-item' id=item2>
-                            Item two
-                        </li>
-                        <li class='pure-menu-item' id=item3>
-                            Item three
-                        </li>
-                        <li class='pure-menu-heading'></li>
-                        <li class='pure-menu-item' id=item1>
-                            Item one
-                        </li>
-                        <li class='pure-menu-item' id=item2>
-                            Item two
-                        </li>
-                        <li class='pure-menu-item' id=item3>
-                            Item three
-                        </li>
-                        <li class='pure-menu-heading'></li>
-                        <li class='pure-menu-item' id=item1>
-                            Item one
-                        </li>
-                        <li class='pure-menu-item' id=item2>
-                            Item two
-                        </li>
-                        <li class='pure-menu-item' id=item3>
-                            Item three
-                        </li>
-                        <li class='pure-menu-heading'></li>
-                        <li class='pure-menu-item' id=item1>
-                            Item one
-                        </li>
-                        <li class='pure-menu-item' id=item2>
-                            Item two
-                        </li>
-                        <li class='pure-menu-item' id=item3>
-                            Item three
-                        </li>
-                        <li class='pure-menu-heading'></li>
-                        <li class='pure-menu-item' id=item1>
-                            Item one
-                        </li>
-                        <li class='pure-menu-item' id=item2>
-                            Item two
-                        </li>
-                        <li class='pure-menu-item' id=item3>
-                            Item three
-                        </li>
-                        <li class='pure-menu-heading'></li>
-                        <li class='pure-menu-item' id=item1>
-                            Item one
-                        </li>
-                        <li class='pure-menu-item' id=item2>
-                            Item two
-                        </li>
-                        <li class='pure-menu-item' id=item3>
-                            Item three
-                            <li class='pure-menu-item' id=item1>
-                                Item one
-                            </li>
-                            <li class='pure-menu-item' id=item2>
-                                Item two
-                            </li>
-                            <li class='pure-menu-item' id=item3>
-                                Item three
-                            </li>
-                            <li class='pure-menu-heading'></li>
-                            <li class='pure-menu-item' id=item1>
-                                Item one
-                            </li>
-                            <li class='pure-menu-item' id=item2>
-                                Item two
-                            </li>
-                            <li class='pure-menu-item' id=item3>
-                                Item three
-                            </li>
-                            <li class='pure-menu-heading'></li>
-                            <li class='pure-menu-item' id=item1>
-                                Item one
-                            </li>
-                            <li class='pure-menu-item' id=item2>
-                                Item two
-                            </li>
-                            <li class='pure-menu-item' id=item3>
-                                Item three
-                            </li>
-                            <li class='pure-menu-heading'></li>
-                            <li class='pure-menu-item' id=item1>
-                                Item one
-                            </li>
-                            <li class='pure-menu-item' id=item2>
-                                Item two
-                            </li>
-                            <li class='pure-menu-item' id=item3>
-                                Item three
-                            </li>
-                            <li class='pure-menu-heading'></li>
-                            <li class='pure-menu-item' id=item1>
-                                Item one
-                            </li>
-                            <li class='pure-menu-item' id=item2>
-                                Item two
-                            </li>
-                            <li class='pure-menu-item' id=item3>
-                                Item three
-                            </li>
-                            <li class='pure-menu-heading'></li>
-                            <li class='pure-menu-item' id=item1>
-                                Item one
-                            </li>
-                            <li class='pure-menu-item' id=item2>
-                                Item two
-                            </li>
-                            <li class='pure-menu-item' id=item3>
-                                Item three
-                                <li class='pure-menu-item' id=item1>
-                                    Item one
-                                </li>
-                                <li class='pure-menu-item' id=item2>
-                                    Item two
-                                </li>
-                                <li class='pure-menu-item' id=item3>
-                                    Item three
-                                </li>
-                                <li class='pure-menu-heading'></li>
-                                <li class='pure-menu-item' id=item1>
-                                    Item one
-                                </li>
-                                <li class='pure-menu-item' id=item2>
-                                    Item two
-                                </li>
-                                <li class='pure-menu-item' id=item3>
-                                    Item three
-                                </li>
-                                <li class='pure-menu-heading'></li>
-                                <li class='pure-menu-item' id=item1>
-                                    Item one
-                                </li>
-                                <li class='pure-menu-item' id=item2>
-                                    Item two
-                                </li>
-                                <li class='pure-menu-item' id=item3>
-                                    Item three
-                                </li>
-                                <li class='pure-menu-heading'></li>
-                                <li class='pure-menu-item' id=item1>
-                                    Item one
-                                </li>
-                                <li class='pure-menu-item' id=item2>
-                                    Item two
-                                </li>
-                                <li class='pure-menu-item' id=item3>
-                                    Item three
-                                </li>
-                                <li class='pure-menu-heading'></li>
-                                <li class='pure-menu-item' id=item1>
-                                    Item one
-                                </li>
-                                <li class='pure-menu-item' id=item2>
-                                    Item two
-                                </li>
-                                <li class='pure-menu-item' id=item3>
-                                    Item three
-                                </li>
-                                <li class='pure-menu-heading'></li>
-                                <li class='pure-menu-item' id=item1>
-                                    Item one
-                                </li>
-                                <li class='pure-menu-item' id=item2>
-                                    Item two
-                                </li>
-                                <li class='pure-menu-item' id=item3>
-                                    Item three
-                                    <li class='pure-menu-item' id=item1>
-                                        Item one
-                                    </li>
-                                    <li class='pure-menu-item' id=item2>
-                                        Item two
-                                    </li>
-                                    <li class='pure-menu-item' id=item3>
-                                        Item three
-                                    </li>
-                                    <li class='pure-menu-heading'></li>
-                                    <li class='pure-menu-item' id=item1>
-                                        Item one
-                                    </li>
-                                    <li class='pure-menu-item' id=item2>
-                                        Item two
-                                    </li>
-                                    <li class='pure-menu-item' id=item3>
-                                        Item three
-                                    </li>
-                                    <li class='pure-menu-heading'></li>
-                                    <li class='pure-menu-item' id=item1>
-                                        Item one
-                                    </li>
-                                    <li class='pure-menu-item' id=item2>
-                                        Item two
-                                    </li>
-                                    <li class='pure-menu-item' id=item3>
-                                        Item three
-                                    </li>
-                                    <li class='pure-menu-heading'></li>
-                                    <li class='pure-menu-item' id=item1>
-                                        Item one
-                                    </li>
-                                    <li class='pure-menu-item' id=item2>
-                                        Item two
-                                    </li>
-                                    <li class='pure-menu-item' id=item3>
-                                        Item three
-                                    </li>
-                                    <li class='pure-menu-heading'></li>
-                                    <li class='pure-menu-item' id=item1>
-                                        Item one
-                                    </li>
-                                    <li class='pure-menu-item' id=item2>
-                                        Item two
-                                    </li>
-                                    <li class='pure-menu-item' id=item3>
-                                        Item three
-                                    </li>
-                                    <li class='pure-menu-heading'></li>
-                                    <li class='pure-menu-item' id=item1>
-                                        Item one
-                                    </li>
-                                    <li class='pure-menu-item' id=item2>
-                                        Item two
-                                    </li>
-                                    <li class='pure-menu-item' id=item3>
-                                        Item three
-                                    </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-    </div>
 
 </body>
 
