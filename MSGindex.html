@@ -29,6 +29,12 @@
             border-bottom: solid 1px black;
         }
         
+        #chatsHeader,
+        #designHeader,
+        #toolsHeader {
+            padding: 20px;
+        }
+        
         #mainBody {
             height: 90%;
         }
@@ -40,6 +46,11 @@
         
         #leftColCont {
             max-height: 100%;
+            direction: rtl;
+        }
+        
+        #leftColCont>ul {
+            direction: ltr;
         }
         
         .custom-menu {
@@ -47,15 +58,20 @@
         }
         
         #col2 {
-            background-color: lightgrey;
+            background-color: palevioletred;
             max-height: 100%;
             position: relative;
             display: flex;
             flex-flow: column;
         }
         
-        #current-chat-container {
+        #currentChatCont {
             flex-grow: 1;
+            direction: rtl;
+        }
+        
+        #currentChatCont>ul {
+            direction: ltr;
         }
         
         .left-message {
@@ -147,68 +163,64 @@
         <div class='pure-g' id='mainBody'>
 
             <div class='pure-u-1 pure-u-sm-1-3 pure-u-xl-1-4' id='col1'>
-                <div>
-                    <div class='pure-menu'>
-
-                        <div class="pure-menu pure-menu-scrollable custom-menu" id="leftColCont">
-                            <ul class="pure-menu-list">
-                                <li class="pure-menu-heading">
-                                    <a href="#" class="pure-menu-link">All Groups</a>
-                                </li>
-                                <li class="pure-menu-item pure-menu-selected">
-                                    <a href="#" class="pure-menu-link">All Messages</a>
-                                </li>
-                                <li class="pure-menu-item">
-                                    <a href="#" class="pure-menu-link">Unreads</a>
-                                </li>
-                                <li class="pure-menu-item">
-                                    <a href="#" class="pure-menu-link">Mentions</a>
-                                </li>
-                                <li class="pure-menu-item">
-                                    <a href="#" class="pure-menu-link">Announcements</a>
-                                </li>
-                                <li class="pure-menu-item">
-                                    <a href="#" class="pure-menu-link">All Channels</a>
-                                </li>
-                                <br><br>
-                            </ul>
-                            <ul class='pure-u-1 pure-menu-list'>
-                                <li class='pure-menu-heading'></li>
-                                <br><br>
-                                <li class="pure-menu-heading">
-                                    <a href="#" class="pure-menu-link">All Messages</a>
-                                </li>
-                                <li class="pure-menu-item pure-menu-selected">
-                                    <a href="#" class="pure-menu-link">Design</a>
-                                </li>
-                                <li class="pure-menu-item">
-                                    <a href="#" class="pure-menu-link">Engineering</a>
-                                </li>
-                                <li class="pure-menu-item">
-                                    <a href="#" class="pure-menu-link">Finance</a>
-                                </li>
-                                <li class="pure-menu-item">
-                                    <a href="#" class="pure-menu-link">Team</a>
-                                </li>
-                                <li class="pure-menu-item">
-                                    <a href="#" class="pure-menu-link">Clothing</a>
-                                </li>
-                                <li class="pure-menu-item">
-                                    <a href="#" class="pure-menu-link">News</a>
-                                </li>
-                                <li class="pure-menu-item">
-                                    <a href="#" class="pure-menu-link">Team Announcements</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <h2 id=chatsHeader>Chats</h2>
+                <div class="pure-u-22-24 pure-u-xl-1 pure-menu pure-menu-scrollable custom-menu" id="leftColCont">
+                    <ul class="pure-menu-list">
+                        <li class="pure-menu-heading">
+                            <a href="#" class="pure-menu-link">All Groups</a>
+                        </li>
+                        <li class="pure-menu-item pure-menu-selected">
+                            <a href="#" class="pure-menu-link">All Messages</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="pure-menu-link">Unreads</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="pure-menu-link">Mentions</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="pure-menu-link">Announcements</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="pure-menu-link">All Channels</a>
+                        </li>
+                        <br><br>
+                    </ul>
+                    <ul class='pure-u-1 pure-menu-list'>
+                        <li class='pure-menu-heading'></li>
+                        <br><br>
+                        <li class="pure-menu-heading">
+                            <a href="#" class="pure-menu-link">All Messages</a>
+                        </li>
+                        <li class="pure-menu-item pure-menu-selected">
+                            <a href="#" class="pure-menu-link">Design</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="pure-menu-link">Engineering</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="pure-menu-link">Finance</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="pure-menu-link">Team</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="pure-menu-link">Clothing</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="pure-menu-link">News</a>
+                        </li>
+                        <li class="pure-menu-item">
+                            <a href="#" class="pure-menu-link">Team Announcements</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
 
 
             <div class='pure-u-1 pure-u-sm-2-3 pure-u-xl-1-2' id='col2'>
-
-                <div class='pure-menu pure-menu-scrollable' id='current-chat-container'>
+                <h2 id=designHeader>Design</h2>
+                <div class='pure-u-22-24 pure-u-xl-1 pure-menu pure-menu-scrollable' id='currentChatCont'>
 
                     <ul class='pure-u-1 pure-menu-list'>
                         <li class='pure-menu-heading'></li>
@@ -304,8 +316,8 @@
             </div>
 
 
-            <div class='pure-u-1 pure-u-xl-1-4 pure-menu-scrollable' id='col3'>
-
+            <div class='pure-u-1 pure-u-xl-1 pure-menu-scrollable' id='col3'>
+                <h2 id=toolsHeader>Tools</h2>
                 <div class='pure-button-group' role='group' aria-label="..." id=toolsButtons>
 
                     <button class="btn btn-outline-dark">Calendar</button>
